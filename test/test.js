@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var rules = fs.readFileSync(path.join(__dirname, '.ignore'))+'';
+var rules = String(fs.readFileSync(path.join(__dirname, '.ignore')));
 var matcher = require('../').createMatcher(rules);
 var test = require('tape');
 
@@ -24,7 +24,7 @@ test('expected output', function (t) {
   };
   checkDir('.');
 
-  t.equal(output, fs.readFileSync(path.join(__dirname, 'expected')) + '');
+  t.equal(output, String(fs.readFileSync(path.join(__dirname, 'expected'))));
   t.end();
 });
 
