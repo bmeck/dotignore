@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var rules = String(fs.readFileSync(path.join(__dirname, '.1\-ignore')));
+var rules = String(fs.readFileSync(path.join(__dirname, '.1-ignore')));
 var matcher = require('../').createMatcher(rules);
 var test = require('tape');
 
