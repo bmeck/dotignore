@@ -1,0 +1,27 @@
+{
+  "name": "dotignore",
+  "version": "0.0.1",
+  "description": "ignorefile/includefile matching .gitignore spec",
+  "main": "index.js",
+  "bin": {
+    "ignored": "bin/ignored"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {"type":"git","url":"http://github.com/bmeck/dotignore"},
+  "keywords": [
+    "ignore",
+    "gitignore",
+    "npmignore",
+    "glob",
+    "pattern"
+  ],
+  "author": {
+    "name": "bradleymeck"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "minimatch": "~0.2.9"
+  }
+}
