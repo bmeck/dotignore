@@ -24,3 +24,4 @@ function checkDir(dir) {
 checkDir('.');
 
 assert.equal(output, fs.readFileSync(path.join(__dirname, 'expected'))+'');
+

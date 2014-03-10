@@ -23,3 +23,4 @@ Returns `true` if the name should be ignored.
 ## LICENSE
 
 MIT
+
