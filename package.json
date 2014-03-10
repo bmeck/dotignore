@@ -23,6 +23,9 @@
   "license": "MIT",
   "dependencies": {
     "minimatch": "~0.2.9"
+  },
+  "devDependencies": {
+    "tape": "~2.10.2"
   }
 }
 
