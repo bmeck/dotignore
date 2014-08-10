@@ -1,6 +1,6 @@
 {
   "name": "dotignore",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ignorefile/includefile matching .gitignore spec",
   "main": "index.js",
   "bin": {
