@@ -7,7 +7,8 @@
     "ignored": "bin/ignored"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "lint": "jscs *.js */*.js"
   },
   "repository": {"type":"git","url":"http://github.com/bmeck/dotignore"},
   "keywords": [
@@ -25,7 +26,8 @@
     "minimatch": "~1.0.0"
   },
   "devDependencies": {
-    "tape": "~2.14.0"
+    "tape": "~2.14.0",
+    "jscs": "~1.5.9"
   }
 }
 
