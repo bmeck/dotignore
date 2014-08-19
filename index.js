@@ -3,7 +3,7 @@ var minimatch = require('minimatch');
 function IgnoreMatcher(str) {
   var negated = this.negated = [];
   var rooted = this.rooted = [];
-  this.matchers = (str.split(/\r?\n|\r/) || []).map(function (line) {
+  this.matchers = (str.split(/\r?\n|\r/)).map(function (line) {
     var negatedLine = line[0] === '!';
     var commentLine = line[0] === '#';
     var rootedLine  = line[0] === '/';
