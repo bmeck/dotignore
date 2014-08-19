@@ -7,7 +7,7 @@
     "ignored": "bin/ignored"
   },
   "scripts": {
-    "test": "node test/test.js",
+    "test": "npm run lint && node test/test.js",
     "coverage": "covert test/test.js",
     "coverage-quiet": "covert --quiet test/test.js",
     "lint": "jscs *.js */*.js"
