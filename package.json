@@ -12,7 +12,10 @@
     "coverage-quiet": "covert --quiet test/test.js",
     "lint": "jscs *.js */*.js"
   },
-  "repository": {"type":"git","url":"http://github.com/bmeck/dotignore"},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bmeck/dotignore"
+  },
   "keywords": [
     "ignore",
     "gitignore",
@@ -30,7 +33,7 @@
   "devDependencies": {
     "tape": "~2.14.0",
     "covert": "~1.0.0",
-    "jscs": "~1.5.9"
+    "jscs": "~1.6.0"
   }
 }
 
