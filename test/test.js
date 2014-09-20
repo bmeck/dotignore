@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var rules = String(fs.readFileSync(path.join(__dirname, '.1-ignore')));
+var rules = String(fs.readFileSync(path.join(process.cwd(), 'test', '.1-ignore')));
 var matcher = require('../').createMatcher(rules);
 var test = require('tape');
 
@@ -22,7 +22,7 @@ var checkDir = function checkDir(dir, paths, output) {
 };
 
 test('expected output', function (t) {
-  process.chdir(__dirname);
+  process.chdir(path.join(process.cwd(), 'test'));
 
   var root = [
     '.ignore',
@@ -38,7 +38,7 @@ test('expected output', function (t) {
 
   var output = checkDir('.', root);
 
-  t.equal(output, String(fs.readFileSync(path.join(__dirname, '1-expected'))));
+  t.equal(output, String(fs.readFileSync('1-expected')));
   t.end();
 });
 
