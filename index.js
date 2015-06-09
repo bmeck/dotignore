@@ -6,7 +6,7 @@ function IgnoreMatcher(str) {
   this.matchers = (str.split(/\r?\n|\r/)).map(function (line) {
     var negatedLine = line[0] === '!';
     var commentLine = line[0] === '#';
-    var rootedLine  = line[0] === '/';
+    var rootedLine = line[0] === '/';
     if (negatedLine || commentLine || rootedLine) {
       line = line.substring(1);
     }
@@ -42,8 +42,7 @@ IgnoreMatcher.prototype.shouldIgnore = function (filename) {
     }
   }
   return isMatching;
-}
+};
 exports.createMatcher = function (ignoreFileStr) {
   return new IgnoreMatcher(ignoreFileStr);
-}
-
+};

@@ -26,12 +26,15 @@ test('expected output', function (t) {
 
   var root = [
     '.ignore',
-    ['a', [
-      ['a', ['notignored']],
-      'ignored',
-      'notignored',
-      'notlisted'
-    ]],
+    [
+      'a',
+      [
+        ['a', ['notignored']],
+        'ignored',
+        'notignored',
+        'notlisted'
+      ]
+    ],
     'expected',
     'test.js'
   ];
