@@ -31,9 +31,9 @@
     "minimatch": "^2.0.10"
   },
   "devDependencies": {
-    "tape": "^4.0.2",
+    "tape": "^4.2.0",
     "covert": "^1.1.0",
-    "jscs": "^2.0.0"
+    "jscs": "^2.1.0"
   }
 }
 

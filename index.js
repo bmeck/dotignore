@@ -18,10 +18,10 @@ function IgnoreMatcher(str) {
     negated[negated.length] = negatedLine;
     rooted[rooted.length] = rootedLine || isShellGlob;
     return minimatch.makeRe(line, {
-      negated: true,//negated,
       comment: commentLine,
       empty: emptyLine,
-      matchBase: !rootedLine
+      matchBase: !rootedLine,
+      negated: true //negated
     });
   }).filter(Boolean);
   return this;
