@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "minimatch": "^2.0.10"
+    "minimatch": "^3.0.4"
   },
   "devDependencies": {
     "tape": "^4.2.0",
@@ -36,4 +36,3 @@
     "jscs": "^2.1.0"
   }
 }
-
