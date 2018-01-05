@@ -45,3 +45,7 @@ test('expected output', function (t) {
   t.end();
 });
 
+test('delimiter defaults to path.sep', function (t) {
+  t.equal(matcher.delimiter, path.sep);
+  t.end();
+});
