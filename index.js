@@ -1,4 +1,5 @@
 var minimatch = require('minimatch');
+var path = require('path');
 
 function IgnoreMatcher(str) {
   var negated = this.negated = [];
@@ -26,7 +27,7 @@ function IgnoreMatcher(str) {
   }).filter(Boolean);
   return this;
 }
-IgnoreMatcher.prototype.delimiter = '/';
+IgnoreMatcher.prototype.delimiter = path.sep;
 IgnoreMatcher.prototype.shouldIgnore = function (filename) {
   var isMatching = false;
   for (var i = 0; i < this.matchers.length; i++) {
