@@ -1,0 +1,9 @@
+[
+    {"winPath": ".ignore", "macPath": ".ignore", "ignoreSymbol": "+"},
+    {"winPath": "a\\a\\notignored", "macPath": "a/a/notignored", "ignoreSymbol": "-"},
+    {"winPath": "a\\ignored", "macPath": "a/ignored", "ignoreSymbol": "-"},
+    {"winPath": "a\\notignored", "macPath": "a/notignored", "ignoreSymbol": "+"},
+    {"winPath": "a\\notlisted", "macPath": "a/notlisted", "ignoreSymbol": "+"},
+    {"winPath": "expected", "macPath": "expected", "ignoreSymbol": "+"},
+    {"winPath": "test.js", "macPath": "test.js", "ignoreSymbol": "+"}
+]

@@ -1,0 +1,5 @@
+*ignored
+!a/not*
+
+## TODO: If the tool you use a package structure, uncomment the next line
+#!package
