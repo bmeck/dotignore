@@ -1,15 +1,19 @@
+'use strict';
+
 var minimatch = require('minimatch');
 var path = require('path');
 
 function IgnoreMatcher(str) {
-  var negated = this.negated = [];
-  var rooted = this.rooted = [];
-  this.matchers = (str.split(/\r?\n|\r/)).map(function (line) {
+  var negated = [];
+  this.negated = negated;
+  var rooted = [];
+  this.rooted = rooted;
+  this.matchers = str.split(/\r?\n|\r/).map(function (line) {
     var negatedLine = line[0] === '!';
     var commentLine = line[0] === '#';
     var rootedLine = line[0] === '/';
     if (negatedLine || commentLine || rootedLine) {
-      line = line.substring(1);
+      line = line.slice(1);
     }
     var emptyLine = line === '';
     if (emptyLine) {
@@ -22,7 +26,7 @@ function IgnoreMatcher(str) {
       comment: commentLine,
       empty: emptyLine,
       matchBase: !rootedLine,
-      negated: true //negated
+      negated: true // negated
     });
   }).filter(Boolean);
   return this;
