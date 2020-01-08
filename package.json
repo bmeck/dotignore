@@ -7,9 +7,10 @@
     "ignored": "bin/ignored"
   },
   "scripts": {
+    "prepublish": "safe-publish-latest",
     "pretest": "npm run lint",
-    "test": "node test/test.js && npm run coverage -- --quiet",
-    "coverage": "covert test/test.js",
+    "test": "node test && npm run coverage -- --quiet",
+    "coverage": "covert test/index.js",
     "lint": "eslint bin/* ."
   },
   "repository": {
@@ -32,8 +33,9 @@
   },
   "devDependencies": {
     "@ljharb/eslint-config": "^15.1.0",
-    "covert": "^1.1.0",
+    "covert": "^1.1.1",
     "eslint": "^6.8.0",
-    "tape": "^4.2.0"
+    "safe-publish-latest": "^1.1.4",
+    "tape": "^4.12.1"
   }
 }
