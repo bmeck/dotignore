@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "ignorefile/includefile matching .gitignore spec",
   "main": "index.js",
+  "type": "index.d.ts",
   "bin": {
     "ignored": "bin/ignored"
   },
