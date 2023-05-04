@@ -40,7 +40,7 @@ IgnoreMatcher.prototype.shouldIgnore = function (filename) {
       if (matcher.test(filename)) {
         isMatching = !this.negated[i];
       }
-    } else if (filename.split(this.delimiter).some(function (part) {
+    } else if (filename.split(this.delimiter).some(function (part) { // eslint-disable-line no-loop-func
       return matcher.test(part);
     })) {
       isMatching = !this.negated[i];

@@ -6,7 +6,7 @@ var rules = String(fs.readFileSync(path.join(process.cwd(), 'test', '.1-ignore')
 var matcher = require('../').createMatcher(rules);
 var test = require('tape');
 
-var checkDir = function checkDir(dir, paths, output) {
+function checkDir(dir, paths, output) {
   if (!output) { output = ''; }
   paths.forEach(function (pathArr) {
     var isDir = Array.isArray(pathArr);
@@ -21,7 +21,7 @@ var checkDir = function checkDir(dir, paths, output) {
     }
   });
   return output;
-};
+}
 
 test('expected output', function (t) {
   process.chdir(path.join(process.cwd(), 'test'));
