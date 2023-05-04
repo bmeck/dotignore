@@ -7,7 +7,8 @@
     "ignored": "bin/ignored"
   },
   "scripts": {
-    "prepublish": "safe-publish-latest",
+    "prepublishOnly": "safe-publish-latest",
+    "prepublish": "not-in-publish || npm run prepublishOnly",
     "lint": "eslint --ext=js,mjs bin/* .",
     "pretest": "npm run lint",
     "tests-only": "nyc node test",
@@ -34,8 +35,9 @@
   "devDependencies": {
     "@ljharb/eslint-config": "^21.0.1",
     "eslint": "=8.8.0",
+    "in-publish": "^2.0.1",
     "nyc": "^10.3.2",
-    "safe-publish-latest": "^1.1.4",
-    "tape": "^4.12.1"
+    "safe-publish-latest": "^2.0.0",
+    "tape": "^5.6.3"
   }
 }
